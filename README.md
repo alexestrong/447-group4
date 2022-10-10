@@ -1,2 +1,5 @@
-# 447-group4
-Crime &amp; COVID Tracker
+# Crime &amp; COVID Tracker
+
+## Developer Guide
+1) Install VSCode
+2) Install 
