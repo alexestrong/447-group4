@@ -1,5 +1,8 @@
 # Crime &amp; COVID Tracker
 
+# Names:
+- Alex Strong
+
 ## Developer Guide
 
 1) Install VS Code
