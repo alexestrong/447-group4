@@ -1,6 +1,6 @@
 # Crime &amp; COVID Tracker
 
-# Names:
+### Names:
 - Alex Strong
 
 ## Developer Guide
