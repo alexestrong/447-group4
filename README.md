@@ -3,8 +3,8 @@
 ### Names:
 - Alex Strong
 
-## Developer Guide
+## User Guide
 
-1) Install VS Code
-2) step 2
-3)
+1) Step 1
+2) Step 2
+3) Step 3
