@@ -2,6 +2,7 @@
 
 ### Names:
 - Alex Strong
+- Lauren Hayden
 
 ## User Guide
 
