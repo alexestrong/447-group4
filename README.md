@@ -3,6 +3,8 @@
 ### Names:
 - Alex Strong
 - Joni Kim
+- Lauren Hayden
+
 
 ## User Guide
 
