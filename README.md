@@ -2,6 +2,7 @@
 
 ### Names:
 - Alex Strong
+- Joni Kim
 
 ## User Guide
 
