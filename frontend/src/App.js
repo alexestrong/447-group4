@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import MapComponent from './components/MapComponent';
 
 function App() {
   return (
     <div className="App">
+
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello Team!
-        </p>
-        <a
-          className="App-link"
-          href="https://team4-fall22.atlassian.net/jira/software/projects/T4F2/boards/1/backlog"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Group 4
-        </a>
+      Hello, Team 4
       </header>
+
+      <div className="App-map">
+      Map will go here
+      <MapComponent />
+      </div>
+
+      <div className="App-filters">
+      Filters will go here
+      </div>
+
+      <div className="App-charts">
+      Charts will go here
+      </div>
+
     </div>
   );
 }
