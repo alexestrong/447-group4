@@ -6,7 +6,7 @@ function App() {
     <div className="App">
 
       <header className="App-header">
-      Hello, Team 4
+      Baltimore Crime and COVID tracker
       </header>
 
       <div className="App-map">
