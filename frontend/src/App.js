@@ -1,5 +1,5 @@
 import './App.css';
-import MapComponent from './components/MapComponent';
+import CrimeComponent from './components/CrimeComponent';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
 
       <div className="App-map">
       Map will go here
-      <MapComponent />
+      <CrimeComponent />
       </div>
 
       <div className="App-filters">
