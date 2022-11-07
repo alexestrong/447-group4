@@ -1,5 +1,5 @@
 import './App.css';
-import CrimeComponent from './components/CrimeComponent';
+import Map from './components/Map';
 
 function App() {
   return (
@@ -9,18 +9,21 @@ function App() {
       Baltimore Crime and COVID tracker
       </header>
 
-      <div className="App-map">
-      Map will go here
-      <CrimeComponent />
-      </div>
+      <div className="float-container">
 
-      <div className="App-filters">
-      Filters will go here
+        <div className="float-child-map">
+          <Map />
+        </div>
+        <div className="float-child-filters">
+          FILTERS
+        </div>
+
       </div>
 
       <div className="App-charts">
-      Charts will go here
+        Charts will go here
       </div>
+
 
     </div>
   );
