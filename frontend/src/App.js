@@ -12,16 +12,21 @@ function App() {
 
       <div className="float-container">
 
-        <div className="float-child-map">
+        <div className="map-container">
           <Map />
         </div>
-        <div className="float-child-filters">
-          FILTERS
+        <div className="filters-container">
+          <header className="filters-title">
+            Filters
+          </header>
+          <div className="filters-body">
+            Put filter component in here
+          </div>
         </div>
 
       </div>
 
-      <div className="App-charts">
+      <div className="charts-container">
         Charts will go here
       </div>
 
