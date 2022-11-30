@@ -1,9 +1,24 @@
+import { useState } from "react";
+import { filt } from './components/Filters'
 import './App.css';
 import Map from './components/Map';
 import React from 'react';
 
 
-function App() {
+export default function App() {
+  const [checkedState, setCheckedState] = useState(
+    new Array(filt.length).fill(false)
+  );
+
+  const handleOnChange = (position) => {
+    const updatedCheckedState = checkedState.map((item, index) =>
+      index === position ? !item : item
+    );
+
+    setCheckedState(updatedCheckedState);
+  };
+
+
   return (
     <div className="App">
 
@@ -21,7 +36,25 @@ function App() {
             Filters
           </header>
           <div className="filters-body">
-            <h4>Weapons</h4>
+            {filt.map(({ name, type }, index) => {
+            return (
+              <li key={index}>
+                <div className="filt-list-item">
+                  <div className="left-section">
+                    <input
+                      type="checkbox"
+                      id={`custom-checkbox-${index}`}
+                      name={name}
+                      value={name}
+                    />
+                    <label htmlFor={`custom-checkbox-${index}`}>{name}</label>
+                  </div>
+                  <div className="right-section">{type}</div>
+                </div>
+              </li>
+            );
+        })}
+            {/* <h4>Weapons</h4>
             <div className="form-check form-check-inline">
             <input className="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"/>
             <label className="form-check-label" for="inlineCheckbox1">Weapon type 1</label>
@@ -80,7 +113,7 @@ function App() {
             <br/>
             <h4>Date</h4>
             <br/>
-            <button type="button" class="btn btn-primary btn-sm">Save</button>
+            <button type="button" class="btn btn-primary btn-sm">Save</button> */}
           </div>
         </div>
 
@@ -94,5 +127,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

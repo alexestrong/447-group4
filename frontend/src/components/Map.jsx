@@ -3,7 +3,8 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import "leaflet.heat";
 //import { addressPoints } from "../data/addressPoints";
-import { addPoints } from "../data/testpoints";
+//import { addPoints } from "../data/testpoints";
+import { addPoints } from "../data/crimepoints";
 
 export default function Map() {
 
