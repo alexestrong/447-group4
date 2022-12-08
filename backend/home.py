@@ -74,7 +74,7 @@ def getData():
     cur.execute("SELECT * FROM crime_info")
     for row in cur.fetchall():
         crime.append({"Date": row[0], "Crime_Despcription": row[1], "Weapon": row[2], "Age": row[3], "Race": row[4], "District": row[5], "Gender": row[6], "Longitude": row[7], "Latitude": row[8], "Crime_Number": row[9]})
-    print(crime)
+    #print(crime)
 
     make_points_list(cur)
 
