@@ -4,7 +4,8 @@ import L from "leaflet";
 import "leaflet.heat";
 //import { addressPoints } from "../data/addressPoints";
 //import { addPoints } from "../data/testpoints";
-import { addPoints } from "../data/crimepoints";
+//import { addPoints } from "../data/crimepoints";
+import { addPoints } from "../data/middleManCoordinates";
 
 export default function Map() {
 
@@ -44,22 +45,20 @@ export default function Map() {
                 '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        // Gather [lat,long] coordinates from our array of coordinate arrays. points = [[lat,lng], [lat,lng], [lat,lng]]
+        // Gather [long,lat] coordinates from our array of coordinate arrays. points = [[lat,lng], [lat,lng], [lat,lng]]
         const points = addPoints
         ? addPoints.map((p) => {
-            return [p[0], p[1]];
+            return [p["Longitude"], p["Latitude"]];
         })
         : []; // If no points are there return an empty 1d array [] rather than an empty 2d array [[]]
         
         // Create the heat layer with our coordinates & add to map 
-        L.heatLayer(points, {
-            radius: 20 // Modification of default radius to make the map more readable
-        }).addTo(map);
+        L.heatLayer(points).addTo(map);
 
 
 
 
-    }, []);
+    }, [addPoints]);
 
 
     // Return the map with styling to fill the MapContainer
