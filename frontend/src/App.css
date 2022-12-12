@@ -51,6 +51,8 @@
   /*background-color: rgba(180, 180, 180, 0.486);*/
   border-radius: 8px;
   border-bottom-right-radius: 8px;
+  overflow: scroll;
+  
 }
 
 .filters-title {

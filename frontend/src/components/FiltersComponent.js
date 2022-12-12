@@ -18,6 +18,7 @@ function FiltersComponent() {
     useEffect(() => {
 
       console.log(dataArray);
+      
 
     }, [dataArray]);
 
@@ -26,6 +27,7 @@ function FiltersComponent() {
 
     return (
       <>
+  
       <div>
         <h2><u>Filters</u></h2>
         <h3>Weapons</h3>
