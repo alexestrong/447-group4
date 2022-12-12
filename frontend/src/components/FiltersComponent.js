@@ -18,6 +18,7 @@ function FiltersComponent() {
     useEffect(() => {
 
       console.log(dataArray);
+      
 
     }, [dataArray]);
 
@@ -26,49 +27,178 @@ function FiltersComponent() {
 
     return (
       <>
-        <input
-          type="checkbox"
-          value='Monday'
-          onChange={e => handleChange(e)}
-        />
-        <span>Monday</span>
+  
+      <div>
+        <h2><u>Filters</u></h2>
+        <h3>Weapons</h3>
 
         <input
           type="checkbox"
-          value='Tuesday'
+          value='FIREARM'
           onChange={e => handleChange(e)}
         />
-        <span>Tuesday</span>
+        <span>Firearm</span>
+        <br></br>
+
         <input
           type="checkbox"
-          value='Wednesday'
+          value='KNIFE'
           onChange={e => handleChange(e)}
         />
-        <span>Wednesday</span>
+        <span>Knife</span>
+        <br></br>
         <input
           type="checkbox"
-          value='Thursday'
+          value='HANDS'
           onChange={e => handleChange(e)}
         />
-        <span>Thursday</span>
+        <span>Hands</span>
+        <br></br>
         <input
           type="checkbox"
-          value='Friday'
+          value='OTHER'
           onChange={e => handleChange(e)}
         />
-        <span>Friday</span>
+        <span>Other</span>
+        <br></br>
         <input
           type="checkbox"
-          value='Saturday'
+          value='NA'
           onChange={e => handleChange(e)}
         />
-        <span>Saturday</span>
+        <span>NA</span>
+        <br></br>
+        <br></br>
+
+        <h3>Gender</h3>
+
         <input
           type="checkbox"
-          value='Sunday'
+          value='M'
           onChange={e => handleChange(e)}
         />
-        <span>Sunday</span>
+        <span>Male</span>
+        <br></br>
+        <input
+          type="checkbox"
+          value='F'
+          onChange={e => handleChange(e)}
+        />
+        <span>Female</span>
+        <br></br>
+        <input
+          type="checkbox"
+          value='U'
+          onChange={e => handleChange(e)}
+        />
+        <span>Unknown</span>
+        <br></br>
+        <br></br>
+
+        <h3>District</h3>
+        <input
+          type="checkbox"
+          value='NORTHEAST'
+          onChange={e => handleChange(e)}
+        />
+        <span>Northeast</span>
+        <br></br>
+        <input
+          type="checkbox"
+          value='EASTERN'
+          onChange={e => handleChange(e)}
+        />
+        <span>Eastern</span>
+        <br></br>
+        <input
+          type="checkbox"
+          value='CENTRAL'
+          onChange={e => handleChange(e)}
+        />
+        <span>Central</span>
+        <br></br>
+        <input
+          type="checkbox"
+          value='NORTHERN'
+          onChange={e => handleChange(e)}
+        />
+        <span>Northern</span>
+        <br></br>
+        <input
+          type="checkbox"
+          value='SOUTHEAST'
+          onChange={e => handleChange(e)}
+        />
+        <span>Southeast</span>
+        <br></br>
+        <input
+          type="checkbox"
+          value='SOUTHERN'
+          onChange={e => handleChange(e)}
+        />
+        <span>Southern</span>
+        <br></br>
+        <input
+          type="checkbox"
+          value='NORTHWEST'
+          onChange={e => handleChange(e)}
+        />
+        <span>Northwest</span>
+        <br></br>
+        <input
+          type="checkbox"
+          value='WESTERN'
+          onChange={e => handleChange(e)}
+        />
+        <span>Western</span>
+        <br></br>
+        <input
+          type="checkbox"
+          value='SOUTHWEST'
+          onChange={e => handleChange(e)}
+        />
+        <span>Southwest</span>
+        <br></br>
+        <br></br>
+
+        <h3>Race</h3>
+
+        <input
+          type="checkbox"
+          value='BLACK_OR_AFRICAN_AMERICAN'
+          onChange={e => handleChange(e)}
+        />
+        <span>Black or African American</span>
+        <br></br>
+        <input
+          type="checkbox"
+          value='WHITE'
+          onChange={e => handleChange(e)}
+        />
+        <span>White</span>
+        <br></br>
+        <input
+          type="checkbox"
+          value='ASIAN'
+          onChange={e => handleChange(e)}
+        />
+        <span>Asian</span>
+        <br></br>
+        <input
+          type="checkbox"
+          value='AMERICAN_INDIAN_OR_ALASKA_NATIVE'
+          onChange={e => handleChange(e)}
+        />
+        <span>American Indian or Alaska Native</span>
+        <br></br>
+        <input
+          type="checkbox"
+          value='UNKNOWN'
+          onChange={e => handleChange(e)}
+        />
+        <span>Unknown</span>
+        <br></br>
+        </div>
       </>
     )
 }
