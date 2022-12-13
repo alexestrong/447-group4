@@ -16,7 +16,6 @@ function FiltersComponent() {
     }
 
     useEffect(() => {
-
       console.log(dataArray);
       //fetch('http://127.0.0.1:5000/resetFilter', {
         //'method': 'GET',
@@ -35,6 +34,7 @@ function FiltersComponent() {
             //}
         //})
     //})
+
       
 
     }, [dataArray]);

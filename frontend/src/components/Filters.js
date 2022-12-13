@@ -80,7 +80,7 @@ export const filt = [
         type: "Race"
     },
     {
-        name: "'AMERICAN_INDIAN_OR_ALASKA_NATIVE",
+        name: "AMERICAN_INDIAN_OR_ALASKA_NATIVE",
         type: "Race"
     },
     {
