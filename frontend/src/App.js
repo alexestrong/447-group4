@@ -10,6 +10,12 @@ function App(){
       <header className="App-header">
       Baltimore Crime and COVID tracker
       </header>
+
+      <header className="App-footer-team">
+      <h1>Team 4</h1>
+      </header>
+
+
       <header className="App-footer">
         Sources:  
         <a href="https://data.baltimorecity.gov/datasets/baltimore::part-1-crime-data-/explore">Crime data source</a>
