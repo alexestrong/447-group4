@@ -1,6 +1,17 @@
 .App {
   text-align: center;
   background-color: #ffffff;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+   -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+       animation: fadein 2s;
+}
+
+.App-footer{
+text-align:right;
+background-color: #282c34;
+color:#ffffff;
 }
 
 .App-header {
@@ -63,7 +74,7 @@
 .filters-body {
   background-color: rgb(196, 205, 207);
   width: 100%;
-  height: 130vh;
+  height: 140vh;
   font-size: 20px;
   text-align: center;
   text-decoration-line: underline;
@@ -93,9 +104,6 @@
 
 
 }
-
-
-
 
 
 .charts-container {
@@ -129,4 +137,35 @@
 ::-webkit-scrollbar-thumb {
   background: #BAC1C2;
   border-radius: 10px;
+}
+
+
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }

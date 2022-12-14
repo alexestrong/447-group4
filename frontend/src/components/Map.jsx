@@ -11,6 +11,7 @@ import "leaflet/dist/images/marker-shadow.png";
 
 export default function Map() {
 
+    console.log("Ran map")
     // We need to store addressPoints passed in as a prop...
     // We need useState [addressPoints, setAddressPoints]...
     // Then use "addressPoints" as a dependency condition to redraw the heat layer
@@ -54,11 +55,11 @@ export default function Map() {
 
         // Gather [long,lat] coordinates from our array of coordinate arrays. points = [[lat,lng], [lat,lng], [lat,lng]]
         const points = addPoints
-        ? addPoints.map((p) => {
-            return [p["Longitude"], p["Latitude"]];
-        })
-        : []; // If no points are there return an empty 1d array [] rather than an empty 2d array [[]]
-        
+            ? addPoints.map((p) => {
+                return [p["Longitude"], p["Latitude"]];
+            })
+            : []; // If no points are there return an empty 1d array [] rather than an empty 2d array [[]]
+
         // Create the heat layer with our coordinates & add to map 
 
         L.heatLayer(points).addTo(map);
@@ -74,7 +75,7 @@ export default function Map() {
             let popupDescription = crimeEntry['Crime_Despcription']
             let popupDate = crimeEntry['Date']
             let popupGender = crimeEntry['Gender']
-            if (popupGender === 'M'){
+            if (popupGender === 'M') {
                 popupGender = 'Male'
             }
             if (popupGender === 'F') {
@@ -86,9 +87,9 @@ export default function Map() {
             let popupAge = crimeEntry['Age']
             let popupText = '<p><strong>Crime:</strong><br>' + popupDescription + '<br><strong>Date:</strong><br>' + popupDate + '<br><strong>Gender:</strong><br>' + popupGender + '<br><strong>Age:</strong><br>' + popupAge + '</p>';
             let imageUrl = 'https://i.pinimg.com/736x/ea/ec/69/eaec69cb893743cdb95f2e8853667c86.jpg'
-            if (crimeEntry['Crime_Despcription'] === 'AUTO THEFT'){
+            if (crimeEntry['Crime_Despcription'] === 'AUTO THEFT') {
                 currMarker.bindPopup(`${popupText}<img src="${imageUrl}" alt="Image" width="80">`);
-            } else{
+            } else {
                 currMarker.bindPopup(`${popupText}`);
             }
             // Add the marker to the markers array
@@ -121,5 +122,5 @@ export default function Map() {
 
 
     // Return the map with styling to fill the MapContainer
-    return <div id="map" style={{ height: "100%", width: "100%", borderRadius: "8px", border: "none"}}></div>;
+    return <div id="map" style={{ height: "100%", width: "100%", borderRadius: "8px", border: "none" }}></div>;
 }
