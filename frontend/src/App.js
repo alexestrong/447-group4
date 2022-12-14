@@ -18,6 +18,9 @@ function App(){
         </div>
         <div className="filters-container">
           <header className="filters-title">
+            <h1>Filters</h1>
+          </header>
+          <header className="filters-body">
             <FiltersComponent />
           </header>
         </div>
