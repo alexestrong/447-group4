@@ -17,36 +17,31 @@ function FiltersComponent() {
     }
   }
 
-  useEffect(() => {
-    console.log(dataArray);
-    //fetch('http://127.0.0.1:5000/resetFilter', {
-    //'method': 'GET',
-    //headers: {
-    //'Content-Type': 'application/json'
-    //}
+    useEffect(() => {
+      console.log(dataArray);
+      //fetch('http://127.0.0.1:5000/resetFilter', {
+        //'method': 'GET',
+          //headers: {
+            //'Content-Type': 'application/json'
+          //}
+      //})
+      //let starterURL = 'http://127.0.0.1:5000/'
+      //dataArray.forEach(currentFilter => {
+        // Check if the marker is inside the bounds of the map view
+        //let completeURL = starterURL + currentFilter
+        //fetch(completeURL, {
+          //'method': 'GET',
+            //headers: {
+              //'Content-Type': 'application/json'
+            //}
+        //})
     //})
-    //let starterURL = 'http://127.0.0.1:5000/'
-    //dataArray.forEach(currentFilter => {
-    // Check if the marker is inside the bounds of the map view
-    //let completeURL = starterURL + currentFilter
-    //fetch(completeURL, {
-    //'method': 'GET',
-    //headers: {
-    //'Content-Type': 'application/json'
-    //}
-    //})
-    //})
+    }, [dataArray])
 
 
-
-  }, [dataArray]);
-
-
-
-
-  return (
-    <>
-
+    return (
+      <>
+  
       <div>
         <h3>Weapons</h3>
 
@@ -216,9 +211,9 @@ function FiltersComponent() {
         />
         <span>Unknown</span>
         <br></br>
-      </div>
-    </>
-  )
+        </div>
+      </>
+    )
 }
 
 export default FiltersComponent
