@@ -2,18 +2,20 @@ import React, { useState, useEffect } from "react";
 
 function FiltersComponent() {
 
-    const [dataArray, setdataArray] = useState([]);
+  console.log("Ran filters")
 
-    const handleChange = (e) => {
-      // setisChecked(e.target.checked);
-      if (e.target.checked === true) {
-        setdataArray([...dataArray, e.target.value]);
-      }
-      else if (e.target.checked === false) {
-        let freshArray = dataArray.filter(val => val !== e.target.value);
-        setdataArray([...freshArray]);
-      }
+  const [dataArray, setdataArray] = useState([]);
+
+  const handleChange = (e) => {
+    // setisChecked(e.target.checked);
+    if (e.target.checked === true) {
+      setdataArray([...dataArray, e.target.value]);
     }
+    else if (e.target.checked === false) {
+      let freshArray = dataArray.filter(val => val !== e.target.value);
+      setdataArray([...freshArray]);
+    }
+  }
 
     useEffect(() => {
       console.log(dataArray);
@@ -34,12 +36,7 @@ function FiltersComponent() {
             //}
         //})
     //})
-
-      
-
-    }, [dataArray]);
-
-
+    }, [dataArray])
 
 
     return (
