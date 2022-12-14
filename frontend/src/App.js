@@ -1,7 +1,9 @@
 import './App.css';
+import ChartTests from './components/ChartTest';
 import Map from './components/Map';
 
 function App() {
+
   return (
     <div className="App">
 
@@ -21,9 +23,8 @@ function App() {
       </div>
 
       <div className="App-charts">
-        Charts will go here
       </div>
-
+      <ChartTests />
 
     </div>
   );
