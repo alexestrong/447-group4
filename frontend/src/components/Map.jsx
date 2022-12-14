@@ -11,6 +11,7 @@ import "leaflet/dist/images/marker-shadow.png";
 
 export default function Map() {
 
+    console.log("Ran map")
     // We need to store addressPoints passed in as a prop...
     // We need useState [addressPoints, setAddressPoints]...
     // Then use "addressPoints" as a dependency condition to redraw the heat layer
