@@ -47,6 +47,7 @@ function FiltersComponent() {
   
       <div>
         <h3>Weapons</h3>
+        <br></br>
 
         <input
           type="checkbox"
@@ -63,6 +64,7 @@ function FiltersComponent() {
         />
         <span>Knife</span>
         <br></br>
+
         <input
           type="checkbox"
           value='weapon_hands'
@@ -87,7 +89,7 @@ function FiltersComponent() {
         <br></br>
 
         <h3>Gender</h3>
-
+        <br></br>
         <input
           type="checkbox"
           value='gender_m'
@@ -95,6 +97,7 @@ function FiltersComponent() {
         />
         <span>Male</span>
         <br></br>
+
         <input
           type="checkbox"
           value='gender_f'
@@ -112,6 +115,7 @@ function FiltersComponent() {
         <br></br>
 
         <h3>District</h3>
+        <br></br>
         <input
           type="checkbox"
           value='district_northeast'
@@ -178,6 +182,7 @@ function FiltersComponent() {
         <br></br>
 
         <h3>Race</h3>
+        <br></br>
 
         <input
           type="checkbox"

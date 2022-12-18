@@ -8,21 +8,19 @@ function App(){
     <div className="App">
 
       <header className="App-header">
-      Baltimore Crime and COVID tracker
+    <h1>Baltimore Crime and COVID tracker</h1>
+    <nav>
+
+      <a href="https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/state/maryland/county/baltimore-county">Covid data source</a>
+      <a href="https://data.baltimorecity.gov/datasets/baltimore::part-1-crime-data-/explore">Crime data source</a>
+
+    </nav>
       </header>
 
       <header className="App-footer-team">
-      <h1>Team 4</h1>
+      <h1>Team 4</h1>Team 4
       </header>
 
-
-      <header className="App-footer">
-        Sources:  
-        <a href="https://data.baltimorecity.gov/datasets/baltimore::part-1-crime-data-/explore">Crime data source</a>
-        |
-        <a href="https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/state/maryland/county/baltimore-county
-">Covid data </a>
-        </header>
 
       <div className="float-container">
 
