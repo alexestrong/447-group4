@@ -215,8 +215,17 @@ h3 {
   border: dotted;
   border-color: red;
   background-color: rgba(255, 0, 0, 0.059);
+
+  /*specifies the number and size of grid columns and rows*/
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
+.chart {
+  grid-column: span 2;
+  grid-row: span 2;
+}
 
 
 /*Custom scrollbar*/

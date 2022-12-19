@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "leaflet": "^1.9.3",
+    "leaflet.heat": "^0.2.0",
+    "react-leaflet": "^4.2.0"
+  }
+}
