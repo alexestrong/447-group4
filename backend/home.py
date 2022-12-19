@@ -23,7 +23,6 @@ crime = []
 def connect():
     conn = pymysql.connect(
         host='localhost',
-        port= 4306,
         user='root', 
         password = "root",
         db='crime',

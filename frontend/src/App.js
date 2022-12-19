@@ -2,6 +2,10 @@ import FiltersComponent from './components/FiltersComponent';
 import './App.css';
 import Map from './components/Map';
 import React from 'react';
+import GenderChart from './components/GenderCharts';
+import CrimeChart from './components/CrimeTypeCharts';
+import DistrictChart from './components/DistrictCharts';
+import CovidChart from './components/CovidCharts';
 
 function App(){
   return (
@@ -28,10 +32,11 @@ function App(){
       </div>
 
       <div className="charts-container">
-        Charts will go here
+        <GenderChart/>
+        <CrimeChart/>
+        <DistrictChart/>
+        <CovidChart/>
       </div>
-
-
     </div>
   );
   }
