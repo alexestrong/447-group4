@@ -1,6 +1,6 @@
 import React from "react";
 import { PieChart, Pie, Cell, Tooltip, Legend} from "recharts";
-import { addPoints } from "../data/middleManCoordinates";
+import { crimeData } from "../data/staticCrimeData";
 
 /*extracts from list of dictionaries what type of districts there are and how many crimes occureed in that district*/
 function GetDistrictData(ListOfDictionary){
@@ -32,7 +32,7 @@ function getRandomColor() {
 /*Creates pie chart for crime by district*/
 function DistrictChart(){
     /*coverts dictionary into an array that we can use for piechart*/
-    const dataArray = Object.entries(GetDistrictData(addPoints)).map(([name, value]) => ({name, value}));
+    const dataArray = Object.entries(GetDistrictData(crimeData)).map(([name, value]) => ({name, value}));
 
     return(
         <PieChart width={400} height ={400}>

@@ -1,5 +1,5 @@
 import React from "react";
-import { addPoints } from "../data/middleManCoordinates";
+import { crimeData } from "../data/staticCrimeData";
 import { BarChart, Bar, XAxis, YAxis, Legend, Tooltip } from "recharts";
 
 /* loops through list of dictionaries and extracts the what type of crimes happened and how many times it happened*/
@@ -23,7 +23,7 @@ function GetCrimeData(ListOfDictionary){
 /*creayes barchart for types of crime*/
 function CrimeChart(){
     /*turns the dictionary into an array that can be used for the chart data */
-    const dataArray = Object.entries(GetCrimeData(addPoints)).map(([name, cases]) => ({name, cases}));
+    const dataArray = Object.entries(GetCrimeData(crimeData)).map(([name, cases]) => ({name, cases}));
 
     return(
         <BarChart width={500} height={300} data = {dataArray} margin={{top: 50}}>

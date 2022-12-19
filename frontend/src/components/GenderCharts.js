@@ -1,6 +1,6 @@
 import React from "react";
 import { PieChart, Pie, Cell, Tooltip, Legend} from "recharts";
-import { addPoints } from "../data/middleManCoordinates";
+import { crimeData } from "../data/staticCrimeData";
 
 /*Get the crimes that were done by males */
 function GetMaleCount(ListOfDictionary){
@@ -34,8 +34,8 @@ function GetFemaleCount(ListOfDictionary){
 
 /*Data that we will be using for pie chart */
 const Genderdata = [
-    {name: "Male", count: GetMaleCount(addPoints)},
-    {name: "Female", count: GetFemaleCount(addPoints)},
+    {name: "Male", count: GetMaleCount(crimeData)},
+    {name: "Female", count: GetFemaleCount(crimeData)},
     {name: "Unknown", count: 2},
   ];
 

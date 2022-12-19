@@ -2,10 +2,7 @@ import React, { useEffect } from "react";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import "leaflet.heat";
-//import { addressPoints } from "../data/addressPoints";
-//import { addPoints } from "../data/testpoints";
-//import { addPoints } from "../data/crimepoints";
-import { addPoints } from "../data/middleManCoordinates";
+import { crimeData } from "../data/staticCrimeData";
 import "leaflet/dist/images/marker-shadow.png";
 
 
@@ -54,8 +51,8 @@ export default function Map() {
         }).addTo(map);
 
         // Gather [long,lat] coordinates from our array of coordinate arrays. points = [[lat,lng], [lat,lng], [lat,lng]]
-        const points = addPoints
-            ? addPoints.map((p) => {
+        const points = crimeData
+            ? crimeData.map((p) => {
                 return [p["Longitude"], p["Latitude"]];
             })
             : []; // If no points are there return an empty 1d array [] rather than an empty 2d array [[]]
@@ -68,7 +65,7 @@ export default function Map() {
         const markersList = [];
 
         // Iterate over the list of coordinates
-        addPoints.forEach(crimeEntry => {
+        crimeData.forEach(crimeEntry => {
             // Add a marker for each coordinate
             let currMarker = L.marker([crimeEntry["Longitude"], crimeEntry["Latitude"]]);
             // Bind a pop up to the marker with some text
@@ -122,7 +119,7 @@ export default function Map() {
                 markersList.forEach(marker => marker.remove());
             }
         });
-    }, [addPoints]);
+    }, [crimeData]);
 
 
     // Return the map with styling to fill the MapContainer

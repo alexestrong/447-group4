@@ -1,6 +1,5 @@
 import FiltersComponent from './components/FiltersComponent';
 import './App.css';
-import Map from './components/Map';
 import React from 'react';
 import GenderChart from './components/GenderCharts';
 import CrimeChart from './components/CrimeTypeCharts';
