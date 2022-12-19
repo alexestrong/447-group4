@@ -24,7 +24,7 @@ function FiltersComponent() {
     }
   }
 
- 
+
   useEffect(() => {
     //console.log(dataArray);
     console.log("Narrow data: useEffect ran");
