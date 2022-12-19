@@ -20,9 +20,14 @@ filteredCrime = []
 global crime
 crime = []
 
+def retApp():
+    return app;
+
+
 def connect():
     conn = pymysql.connect(
         host='localhost',
+        #port= 4306,
         user='root', 
         password = "root",
         db='crime',
@@ -99,20 +104,20 @@ def getData():
     for row in cur.fetchall():
         crime.append({"Date": row[0].isoformat(), "Crime_Despcription": row[1], "Weapon": row[2], "Age": row[3],
                      "Race": row[4], "District": row[5], "Gender": row[6], "Longitude": float(row[7]), "Latitude": float(row[8]), "Crime_Number": row[9]})
-    print(crime)
+    #print(crime)
 
     # Make a copy of crime that we will then narrow down with filters
     global filteredCrime
     filteredCrime = crime
 
-    make_points_list(cur)
+    #make_points_list(cur)
 
 
     cur.close()
     ret_crime = crime_json(crime)
     ret_covid = covid_json(covid)
 
-    return ret_crime
+    return crime
     #return render_template("app.html", covid = covid, crime = crime)
 
 #########################################################################################
@@ -134,6 +139,38 @@ def resetFilter():
 #    global filteredCrime
 #    sendCoordinatesToJavascript(filteredCrime)
 #    return jsonify(filteredCrime)
+
+
+
+
+
+# /filters?filter=Weapon:FIREARM&filter=Gender:F
+
+#var filters = ['Weapon:FIREARM', 'Gender:F']
+@app.route('/filters')
+def applyFilter():
+    filteredCrime = getData()
+    #global filteredCrime
+    #global crime
+    #filteredCrime = crime
+    # Get a list of all the filter values
+    filters = request.args.getlist('filter')
+
+    # Iterate over the filters
+    for f in filters:
+        # Split the filter value on the ":" character to get the key and value
+        key, value = f.split(":")
+
+        # Use a list comprehension to create a new list of dictionaries
+        # that only contains dictionaries with the key-value pair specified in the filter
+        filteredCrime = [d for d in filteredCrime if d[key] == value]
+
+    # Use the jsonify() function to convert the list of dictionaries into a JSON-formatted string
+    json_items = jsonify(filteredCrime)
+    print(len(filteredCrime))
+
+    # Return the JSON-formatted string
+    return json_items
 
 
 @app.route('/weapon_firearm')
