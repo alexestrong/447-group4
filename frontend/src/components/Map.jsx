@@ -74,6 +74,7 @@ export default function Map() {
             // Bind a pop up to the marker with some text
             let popupDescription = crimeEntry['Crime_Despcription']
             let popupDate = crimeEntry['Date']
+            let popupAge = crimeEntry['Age']
             let popupGender = crimeEntry['Gender']
             if (popupGender === 'M') {
                 popupGender = 'Male'
@@ -84,7 +85,10 @@ export default function Map() {
             if (popupGender === 'U') {
                 popupGender = 'Unknown'
             }
-            let popupAge = crimeEntry['Age']
+            if (popupAge === 0) {
+                console.log("Age is" + popupAge)
+                popupAge = 'Unknown'
+            }
             let popupText = '<p><strong>Crime:</strong><br>' + popupDescription + '<br><strong>Date:</strong><br>' + popupDate + '<br><strong>Gender:</strong><br>' + popupGender + '<br><strong>Age:</strong><br>' + popupAge + '</p>';
             let imageUrl = 'https://i.pinimg.com/736x/ea/ec/69/eaec69cb893743cdb95f2e8853667c86.jpg'
             if (crimeEntry['Crime_Despcription'] === 'AUTO THEFT') {
