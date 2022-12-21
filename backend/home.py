@@ -102,14 +102,13 @@ def getData():
 #########################################################################################
 
 
-# /filters?filter=Weapon:FIREARM&filter=Gender:F
-#var filters = ['Weapon:FIREARM', 'Gender:F']
+# localhost:5000/filters?filter=Weapon:FIREARM&filter=Gender:F
+# var filters = ['Weapon:FIREARM', 'Gender:F']
 @app.route('/filters')
 def applyFilter():
+    # Set filteredCrime to hold all data
     filteredCrime = getData()
-    #global filteredCrime
-    #global crime
-    #filteredCrime = crime
+
     # Get a list of all the filter values
     filters = request.args.getlist('filter')
 
@@ -124,7 +123,6 @@ def applyFilter():
 
     # Use the jsonify() function to convert the list of dictionaries into a JSON-formatted string
     json_items = jsonify(filteredCrime)
-    print(len(filteredCrime))
 
     # Return the JSON-formatted string
     return json_items

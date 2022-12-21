@@ -52,7 +52,7 @@ function GenderChart(){
 
         <Pie data={Genderdata} dataKey="count" cx={200} cy={200} outerRadius={80}>
             {Genderdata.map((entry, index) => (
-            <Cell key={'cell-${index}'} fill={COLORS[index % COLORS.length]} value={entry.count} />
+            <Cell key={'cell-' + index} fill={COLORS[index % COLORS.length]} value={entry.count} />
      ))}
         </Pie>
         <Legend/>

@@ -175,7 +175,7 @@ function FiltersComponent() {
         // Add a listener to the map that checks the current zoom level
         // and shows or hides the markers based on the zoom level
         map.on("zoomend moveend", function () {
-          if (map.getZoom() > 17) {
+          if (map.getZoom() > 16) {
             // If the zoom level is greater than 17, get the bounds of the map view
             const bounds = map.getBounds();
             // Iterate over the markers
@@ -253,7 +253,7 @@ function FiltersComponent() {
               <br></br>
 
               <h3>Gender</h3>
-
+              <br></br>
               <input
                 type="checkbox"
                 value='Gender:M'
@@ -278,6 +278,7 @@ function FiltersComponent() {
               <br></br>
 
               <h3>District</h3>
+              <br></br>
               <input
                 type="checkbox"
                 value='District:NORTHEAST'
@@ -344,7 +345,7 @@ function FiltersComponent() {
               <br></br>
 
               <h3>Race</h3>
-
+              <br></br>
               <input
                 type="checkbox"
                 value='Race:BLACK_OR_AFRICAN_AMERICAN'

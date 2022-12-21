@@ -16,21 +16,21 @@ function App() {
 
           <a href="https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/state/maryland/county/baltimore-county">Covid data source</a>
           <a href="https://data.baltimorecity.gov/datasets/baltimore::part-1-crime-data-/explore">Crime data source</a>
-
+          <a href="https://wall.alphacoders.com/big.php?i=647161">Background source</a>
         </nav>
       </header>
 
       <header className="App-footer-team">
-        <h1>Team 4</h1>Team 4
+        <h5>Team 4</h5>
       </header>
 
       <FiltersComponent />
 
       <div className="charts-container">
-        <GenderChart/>
-        <CrimeChart/>
-        <DistrictChart/>
-        <CovidChart/>
+        <GenderChart />
+        <CrimeChart />
+        <DistrictChart />
+        <CovidChart />
       </div>
     </div>
   );

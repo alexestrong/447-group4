@@ -43,7 +43,7 @@ function DistrictChart(){
 
         <Pie data={dataArray} dataKey="value" cx={200} cy={200} outerRadius={80}>
             {dataArray.map((entry, index) => (
-            <Cell key={'cell-${index}'} fill={getRandomColor()} value={entry.value} />
+                <Cell key={'cell-' + index} fill={getRandomColor()} value={entry.value}/>
      ))}
         </Pie>
         <Legend/>

@@ -37,19 +37,18 @@
 
 }
 
-.App header a:hover{
+.App header a:hover {
   color: rgb(157, 157, 157);
 
 }
 
 .App-header {
   width: 100%;
-  height: 20vh;
-  padding-top: 2vh;
+  height: 15vh;
+  padding-top: 0vh;
   background-color: #040505;
   text-align: center;
   position: relative;
-  position: fixed;
   top: 0;
   overflow: hidden;
   -webkit-transition: all 0.25s;
@@ -64,7 +63,7 @@
   position: absolute;
   bottom: 0;
   padding-left: 50ch;
-  padding-top: 2vh;
+  padding-top: 0vh;
   height: 60px;
   line-height: 60px;
   width: 100%;
@@ -77,8 +76,8 @@
 
   text-align: right;
   padding-right: 2.5ch;
-  height: 10vh;
-  top:30vh;
+  height: 5vh;
+  top: 30vh;
   background-color: #000000;
   color: #ffffff;
 
@@ -110,7 +109,10 @@
   padding: 20px;
   height: 85vh;
   background-color: #242424;
-
+  background-image: url("https://images2.alphacoders.com/647/647161.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 
@@ -129,7 +131,8 @@
 
 
 .filters-container {
-  top:10vh;
+
+  top: 10vh;
   width: 25%;
   float: left;
   height: 80vh;
@@ -146,7 +149,7 @@
   font-size: calc(10px + 2vmin);
   font-family: "Signika Negative", sans-serif;
   font-weight: 100;
-  background-color:black;
+  background-color: black;
   font-weight: 100;
 
 }
@@ -155,10 +158,10 @@ h3 {
   background-color: #000;
   border: solid;
   border-bottom-width: 1px;
-  border-bottom-color:white;
-  border-top:none;
-  border-left:none;
-  border-right:none;
+  border-bottom-color: white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
   color: white;
   padding: 6px 160px;
   max-width: 100%;
@@ -205,16 +208,17 @@ h3 {
 
 
 .charts-container {
+
   background-color: #ffffff;
   position: absolute;
-  top: 102vh;
+  top: 100vh;
 
   height: 100%;
   width: 100%;
 
-  border: dotted;
-  border-color: red;
-  background-color: rgba(255, 0, 0, 0.059);
+  border: solid;
+  border-color: rgb(0, 0, 0);
+  background-color: rgba(46, 25, 56, 0.059);
 
   /*specifies the number and size of grid columns and rows*/
   display: grid;
